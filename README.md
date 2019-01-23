@@ -1,24 +1,35 @@
-# README
+# Crawford-Wedding
+Welcome to *Crawford-Wedding*, a Rails API powered Web-app designed with React. With *Crawford-Wedding*, the user will be able to RSVP to the wedding, pick a dinner plate, and request a song. The user will be able to see all guests who have RSVP'd and their song requests. Registry links as well as hotel links are provided via the React frontend. Other wedding details are also available to the user.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation and Usage
+Clone repository `$ git clone git@github.com:torianne02/crawford-wedding-api.git`
 
-Things you may want to cover:
+Change directory by running `$ cd crawford-wedding-api`.
 
-* Ruby version
+Then, run the following:
+```ruby
+$ bundle install
+$ rake db:migrate RAILS_ENV=development
+$ rails s -p 3001
+```
+Clone repository `$ git clone git@github.com:torianne02/crawford-wedding-frontend.git`
 
-* System dependencies
+Change directory by running `$ cd crawford-wedding-frontend`
 
-* Configuration
+Then, run the following:
+``` ruby
+$ run npm install
+$ run npm start
+```
 
-* Database creation
+## Contributing
 
-* Database initialization
 
-* How to run the test suite
+## License
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Code of Conduct
 
-* ...
+
+## Credits
+Project structure developed with Rails gem.
