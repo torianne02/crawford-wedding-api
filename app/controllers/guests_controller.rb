@@ -1,4 +1,33 @@
 class GuestsController < ApplicationController
+  before_action :set_guest, only: %i[show]
+
+  # GET /guests/
+  def index
+    @guests = Guest.all
+    render json: @guests
+  end
+
+  # GET /guests/:id
+  def show
+    @guest_rsvp = @guest.rsvp
+    render json: @guest_rsvp
+  end
+
+  def new
+    @guest = Guest.new
+    @rsvp = Rsvp.new
+  end
+
+  # POST /guests
+  def create
+    @guest = Guest.find_or_create_by(guest_params)
+    @rsvp = Rsvp.create(guest_params[:rsvp_attributes])
+    @rsvp.guest_id = @guest.id
+
+    if @guest.save
+      response json: @guest
+    end 
+  end
 
   private
 
