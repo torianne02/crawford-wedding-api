@@ -15,8 +15,6 @@ gem 'puma', '~> 3.11'
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Allows storage and calling of API keys in .env file
-gem 'dotenv-rails'
 # Pry
 gem 'pry'
 # Use ActiveStorage variant
