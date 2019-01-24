@@ -10,7 +10,8 @@ class GuestsController < ApplicationController
   # GET /guests/:id
   def show
     @guest_rsvp = @guest.rsvp
-    render json: @guest_rsvp
+    response = { :guest => @guest, :guest_rsvp => @guest_rsvp }
+    render json: response
   end
 
   def new
@@ -26,7 +27,7 @@ class GuestsController < ApplicationController
 
     if @guest.save
       response json: @guest
-    end 
+    end
   end
 
   private
