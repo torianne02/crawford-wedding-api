@@ -10,12 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_23_205009) do
-
-  create_table "guests", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-  end
+ActiveRecord::Schema.define(version: 2019_01_28_232444) do
 
   create_table "rsvps", force: :cascade do |t|
     t.integer "attendees"
