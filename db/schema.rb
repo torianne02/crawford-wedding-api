@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_28_232444) do
+ActiveRecord::Schema.define(version: 2019_01_28_232946) do
 
   create_table "rsvps", force: :cascade do |t|
     t.integer "attendees"
     t.string "song_request"
     t.integer "guest_id"
     t.boolean "accept", default: false
+    t.string "name"
+    t.string "email"
   end
 
 end
