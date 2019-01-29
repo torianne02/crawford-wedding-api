@@ -1,3 +1,3 @@
 class Rsvp < ActiveRecord::Base
-  validates :attendees, :presence => true
+  validates :attendees, :accept, :presence => true
 end
