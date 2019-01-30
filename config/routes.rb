@@ -3,6 +3,7 @@ Rails.application.routes.draw do
 
   get 'rsvps/:id', to: 'rsvps#show'
   get 'rsvps', to: 'rsvps#index'
+  get 'rsvps/attending', to: 'rsvps#attending'
   post 'rsvps/:id', to: 'rsvps#create'
 
   # FUTURE USE
