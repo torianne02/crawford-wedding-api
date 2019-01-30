@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_29_224657) do
+ActiveRecord::Schema.define(version: 2019_01_30_170910) do
 
   create_table "rsvps", force: :cascade do |t|
     t.integer "attendees"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2019_01_29_224657) do
     t.integer "guest_id"
     t.string "name"
     t.string "email"
-    t.boolean "accept"
+    t.string "accept"
   end
 
 end
