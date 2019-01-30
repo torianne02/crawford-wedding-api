@@ -7,9 +7,9 @@ class RsvpsController < ApplicationController
     render json: @rsvps
   end
 
-  # GET /rsvps/attending
-  def attending
-    @attending = Rsvp.where(accept: "accepts")
+  # GET /guest_list
+  def guest_list
+    @attending = Rsvp.where(accept: 'accepts')
     render json: @attending
   end
 

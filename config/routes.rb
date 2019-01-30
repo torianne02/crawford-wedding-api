@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
-  root 'static_pages#home'
+  # root 'static_pages#home'
 
   get 'rsvps/:id', to: 'rsvps#show'
   get 'rsvps', to: 'rsvps#index'
-  get 'rsvps/attending', to: 'rsvps#attending'
-  post 'rsvps/:id', to: 'rsvps#create'
+  get '/guest_list', to: 'rsvps#guest_list'
+  post 'rsvps/:name', to: 'rsvps#create'
 
   # FUTURE USE
   # get 'guests/:id', to: 'guests#show'
