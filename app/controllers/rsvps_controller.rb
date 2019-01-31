@@ -25,9 +25,10 @@ class RsvpsController < ApplicationController
   # POST /rsvps
   def create
     @rsvp = Rsvp.create(rsvp_params)
-
     if @rsvp.save
-      response json: @rsvp
+      render json: @rsvp
+    else
+      render json: {errors: { message: 'RSVP failed'}}
     end
   end
 
