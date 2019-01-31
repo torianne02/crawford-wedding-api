@@ -13,7 +13,7 @@ class RsvpsController < ApplicationController
     render json: @attending
   end
 
-  # GET /rsvps/:id
+  # GET /rsvps/:name
   def show
     render json: @rsvp
   end
@@ -22,9 +22,9 @@ class RsvpsController < ApplicationController
     @rsvp = Rsvp.new
   end
 
-  # POST /rsvps
+  # POST /rsvps/:email
   def create
-    @rsvp = Rsvp.find_or_create_by(rsvp_params)
+    @rsvp = Rsvp.create(rsvp_params)
 
     if @rsvp.save
       response json: @rsvp
