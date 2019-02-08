@@ -14,9 +14,9 @@ class RsvpsController < ApplicationController
   end
 
   # GET /rsvps/:id
-  def show
-    render json: @rsvp
-  end
+  # def show
+  #   render json: @rsvp
+  # end
 
   def new
     @rsvp = Rsvp.new
